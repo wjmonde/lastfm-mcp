@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lastfm-music-discovery",
+  "version": "0.3.0",
+  "description": "Read-only Last.fm listening history for music discovery, rediscovery, and familiarity checks.",
+  "license": "MIT",
+  "keywords": ["music", "lastfm", "listening-history", "recommendations", "rediscovery"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Last.fm Music Discovery",
+        "shortDescription": "Use Last.fm history to discover and rediscover music.",
+        "longDescription": "Read recent scrobbles and listening charts, check whether a listener already knows an artist, and surface historically important artists they have not played recently.",
+        "category": "Lifestyle",
+        "capabilities": ["Read"],
+        "defaultPrompt": [
+          "Use my Last.fm history to suggest five albums I might enjoy.",
+          "Find artists I used to listen to a lot but have neglected recently.",
+          "Check whether I already know this artist before recommending them."
+        ]
+      }
+    }
+  }
+}
